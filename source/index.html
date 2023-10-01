@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -68,12 +68,14 @@
         </section>
 
         <section class="advantages">
-          <h2 class="advantages__heading heading">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+          <div class="advantages__title title">
+            <h2 class="title__heading heading">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
 
-          <p class="advantages__description description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+            <p class="title__description description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+          </div>
 
           <ul class="advantages__list">
-            <li class="advantages__item advantages__item--city">
+            <li class="advantages__item advantages__item--extencive">
               <h3 class="advantages__item-heading heading heading--light">Настоящий городок</h3>
 
               <p class="advantages__item-description description description--light">Седона не аттракцион для туристов, там течет своя жизнь</p>
@@ -105,7 +107,7 @@
               </ul>
             </li>
 
-            <li class="advantages__item advantages__item--canyon">
+            <li class="advantages__item advantages__item--extencive advantages__item--extencive-reverse">
               <h3 class="advantages__item-heading heading heading--light">Там есть мост дьявола</h3>
 
               <p class="advantages__item-description description description--light">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
@@ -150,7 +152,7 @@
         <section class="map-widget">
           <h2 class="visually-hidden">Седона на карте.</h2>
 
-          <iframe class="map-widget__interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d296019.7092506959!2d-111.9076621534567!3d34.941901279130825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1695845631836!5m2!1sru!2sru" width="320" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe class="map-widget__interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d296019.7092506959!2d-111.9076621534567!3d34.941901279130825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1695845631836!5m2!1sru!2sru" width="320" height="350" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
           <div class="map-widget__fallback">
             <picture>

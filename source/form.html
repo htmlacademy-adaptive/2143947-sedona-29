@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -68,127 +68,129 @@
         </section>
 
         <section class="review">
-          <h2 class="review__heading heading">Оставьте свой отзыв</h2>
+          <div class="review__title title">
+            <h2 class="title__heading heading">Оставьте свой отзыв</h2>
 
-          <p class="review__description description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+            <p class="title__description description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          </div>
 
-          <form class="review__form" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="review__form-fieldset tourist-name">
-              <legend class="tourist-name__heading heading">Представьтесь:</legend>
+          <form class="review__form form" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="form__fieldset">
+              <legend class="form__heading heading">Представьтесь:</legend>
 
-              <label class="tourist-name__input">
-                <span class="tourist-name__input-description">Имя*:</span>
+              <label class="form__input">
+                <span class="form__input-description">Имя*:</span>
 
-                <input class="tourist-name__input-cell" type="text" name="tourist-name" value="Пётр" required>
+                <input class="form__input-cell" type="text" name="tourist-name" value="Пётр" required>
               </label>
 
-              <label class="tourist-name__input">
-                <span class="tourist-name__input-description">Фамилия*:</span>
+              <label class="form__input">
+                <span class="form__input-description">Фамилия*:</span>
 
-                <input class="tourist-name__input-cell" type="text" name="tourist-surname" value="Пустота" required>
+                <input class="form__input-cell" type="text" name="tourist-surname" value="Пустота" required>
               </label>
 
-              <label class="tourist-name__input">
-                <span class="tourist-name__input-description">Отчество:</span>
+              <label class="form__input">
+                <span class="form__input-description">Отчество:</span>
 
-                <input class="tourist-name__input-cell" type="text" name="tourist-patronymic" value="Викторович">
-              </label>
-            </fieldset>
-
-            <fieldset class="review__form-fieldset tourist-contacts">
-              <legend class="tourist-contacts__heading heading">Контактная информация:</legend>
-
-              <label class="tourist-contacts__input">
-                <span class="tourist-contacts__input-description">Контактный телефон*:</span>
-
-                <input class="tourist-contacts__input-cell" type="tel" name="tourist-phone" placeholder="Введите телефон" required>
-              </label>
-
-              <label class="tourist-contacts__input">
-                <span class="tourist-contacts__input-description">Электронная почта*:</span>
-
-                <input class="tourist-contacts__input-cell" type="email" name="tourist-email" placeholder="Введите e-mail" required>
+                <input class="form__input-cell" type="text" name="tourist-patronymic" value="Викторович">
               </label>
             </fieldset>
 
-            <fieldset class="review__form-fieldset tourist-impression">
-              <legend class="tourist-impression__heading heading">Ваше общее впечатление:</legend>
+            <fieldset class="form-fieldset">
+              <legend class="form__heading heading">Контактная информация:</legend>
 
-              <ul class="tourist-impression__list">
-                <li class="tourist-impression__item">
-                  <label class="tourist-impression__description-wrapper">
-                    <input class="visually-hidden tourist-impression__input" type="radio" name="tourist-impression" value="positive" checked>
-                    <span class="tourist-impression__description">Скорее положительное</span>
-                    <span class="tourist-impression__decoration"></span>
+              <label class="form__input">
+                <span class="form__input-description">Контактный телефон*:</span>
+
+                <input class="form__input-cell" type="tel" name="tourist-phone" placeholder="Введите телефон" required>
+              </label>
+
+              <label class="form__input">
+                <span class="form__input-description">Электронная почта*:</span>
+
+                <input class="form__input-cell" type="email" name="tourist-email" placeholder="Введите e-mail" required>
+              </label>
+            </fieldset>
+
+            <fieldset class="form-fieldset">
+              <legend class="form__heading heading">Ваше общее впечатление:</legend>
+
+              <ul class="form__list">
+                <li class="form__item form__item--radio">
+                  <label class="form__description-wrapper">
+                    <input class="visually-hidden form__input" type="radio" name="tourist-impression" value="positive" checked>
+                    <span class="form__description">Скорее положительное</span>
+                    <span class="form__decoration"></span>
                   </label>
                 </li>
 
-                <li class="tourist-impression__item">
-                  <label class="tourist-impression__description-wrapper">
-                    <input class="visually-hidden tourist-impression__input" type="radio" name="tourist-impression" value="negative">
-                    <span class="tourist-impression__description">Скорее отрицательное</span>
-                    <span class="tourist-impression__decoration"></span>
+                <li class="form__item form__item--radio">
+                  <label class="form__description-wrapper">
+                    <input class="visually-hidden form__input" type="radio" name="tourist-impression" value="negative">
+                    <span class="form__description">Скорее отрицательное</span>
+                    <span class="form__decoration"></span>
                   </label>
                 </li>
 
-                <li class="tourist-impression__item">
-                  <label class="tourist-impression__description-wrapper">
-                    <input class="visually-hidden tourist-impression__input" type="radio" name="tourist-impression" value="don't know">
-                    <span class="tourist-impression__description">Затрудняюсь ответить</span>
-                    <span class="tourist-impression__decoration"></span>
+                <li class="form__item form__item--radio">
+                  <label class="form__description-wrapper">
+                    <input class="visually-hidden form__input" type="radio" name="tourist-impression" value="don't know">
+                    <span class="form__description">Затрудняюсь ответить</span>
+                    <span class="form__decoration"></span>
                   </label>
                 </li>
               </ul>
             </fieldset>
 
-            <fieldset class="review__form-fieldset visited-attractions">
-              <legend class="visited-attractions__heading heading">Посещенные достопримечательности:</legend>
+            <fieldset class="form-fieldset">
+              <legend class="form__heading heading">Посещенные достопримечательности:</legend>
 
-              <ul class="visited-attractions__list">
-                <li class="visited-attractions__item">
-                  <label class="visited-attractions__description-wrapper">
-                    <input class="visually-hidden visited-attractions__input" type="checkbox" name="visited-attractions" value="devils bridge" checked>
-                    <span class="visited-attractions__description">Мост Дьявола</span>
-                    <span class="visited-attractions__decoration"></span>
+              <ul class="form__list">
+                <li class="form__item form__item--checkbox">
+                  <label class="form__description-wrapper">
+                    <input class="visually-hidden form__input" type="checkbox" name="visited-attractions" value="devils bridge" checked>
+                    <span class="form__description">Мост Дьявола</span>
+                    <span class="form__decoration"></span>
                   </label>
                 </li>
 
-                <li class="visited-attractions__item">
-                  <label class="visited-attractions__description-wrapper">
-                    <input class="visually-hidden visited-attractions__input" type="checkbox" name="visited-attractions" value="bell-mountain" checked>
-                    <span class="visited-attractions__description">Гора-Колокол</span>
-                    <span class="visited-attractions__decoration"></span>
+                <li class="form__item form__item--checkbox">
+                  <label class="form__description-wrapper">
+                    <input class="visually-hidden form__input" type="checkbox" name="visited-attractions" value="bell-mountain" checked>
+                    <span class="form__description">Гора-Колокол</span>
+                    <span class="form__decoration"></span>
                   </label>
                 </li>
 
-                <li class="visited-attractions__item">
-                  <label class="visited-attractions__description-wrapper">
-                    <input class="visually-hidden visited-attractions__input" type="checkbox" name="visited-attractions" value="slide-park" checked>
-                    <span class="visited-attractions__description">Слайд-парк</span>
-                    <span class="visited-attractions__decoration"></span>
+                <li class="form__item form__item--checkbox">
+                  <label class="form__description-wrapper">
+                    <input class="visually-hidden form__input" type="checkbox" name="visited-attractions" value="slide-park" checked>
+                    <span class="form__description">Слайд-парк</span>
+                    <span class="form__decoration"></span>
                   </label>
                 </li>
 
-                <li class="visited-attractions__item">
-                  <label class="visited-attractions__description-wrapper">
-                    <input class="visually-hidden visited-attractions__input" type="checkbox" name="visited-attractions" value="red rocks">
-                    <span class="visited-attractions__description">Красные скалы</span>
-                    <span class="visited-attractions__decoration"></span>
+                <li class="form__item form__item--checkbox">
+                  <label class="form__description-wrapper">
+                    <input class="visually-hidden form__input" type="checkbox" name="visited-attractions" value="red rocks">
+                    <span class="form__description">Красные скалы</span>
+                    <span class="form__decoration"></span>
                   </label>
                 </li>
               </ul>
             </fieldset>
 
-            <fieldset class="review__form-fieldset tourist-comment">
-              <legend class="tourist-comment__heading heading">Опишите свои эмоции:</legend>
+            <fieldset class="form-fieldset">
+              <legend class="form__heading heading">Опишите свои эмоции:</legend>
 
-              <textarea class="tourist-comment__input" name="tourist-comment" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+              <textarea class="form__input form__input--textarea" name="tourist-comment" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
             </fieldset>
 
-            <div class="review__form__button-wrapper">
-              <button class="review__form__button main-button" type="submit">Отправить отзыв</button>
+            <div class="form__button-wrapper">
+              <button class="form__button main-button" type="submit">Отправить отзыв</button>
 
-              <p class="review__form__note">* — Обязательные поля</p>
+              <p class="form__note">* — Обязательные поля</p>
             </div>
           </form>
         </section>
