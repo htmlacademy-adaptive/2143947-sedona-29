@@ -1,3 +1,5 @@
+@use "../global/variables" as var;
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -19,4 +21,27 @@ img {
 
 a {
   text-decoration: none;
+}
+
+.heading {
+  color: var.$black;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+
+  &--big {
+    font-size: 21px;
+  }
+
+  &--light {
+    color: var.$white;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 21px;
+
+    &--big {
+      font-size: 30px;
+    }
+  }
 }

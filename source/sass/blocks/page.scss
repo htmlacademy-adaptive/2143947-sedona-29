@@ -20,5 +20,19 @@
 
   margin: 0;
 
+  background-color: var.$light-grey;
+
   overflow-x: hidden;
+}
+
+.page__wrapper {
+  background-color: var.$white;
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 auto;
+
+    width: 1200px;
+
+    box-shadow: 0 5px 15px 0 rgba(var.$shadow, 0.2);
+  }
 }
