@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="img/svg/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="preload" as="font" href="fonts/ptsansbold.woff2" crossorigin="anonymous">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Сайт города Седона. Каталог фото и видео.">
+  </head>
+
+  <body class="page__body page__body--no-js">
+    <div class="page__wrapper">
+      <header class="main-header">
+        <a class="main-header__logo-link" href="#">
+          <img src="img/svg/main-logo.svg" width="185" height="96" alt="Логотип города Седона.">
+        </a>
+
+        <nav class="main-navigation main-navigation--closed">
+          <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню.</span></button>
+
+          <div class="main-navigation__wrapper">
+            <ul class="main-navigation__list site-list">
+              <li class="site-list__item">
+                <a class="site-list__link" href="index.html">
+                  Главная
+                </a>
+              </li>
+
+              <li class="site-list__item site-list__item--current">
+                <a class="site-list__link" href="#">
+                  Фото и видео
+                </a>
+              </li>
+
+              <li class="site-list__item">
+                <a class="site-list__link" href="form.html">
+                  Форма отзыва
+                </a>
+              </li>
+
+              <li class="site-list__item">
+                <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">
+                  Html academy
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <main class="main-container">
+        <h1 class="visually-hidden">Сайт города Седона. Каталог фото и видео.</h1>
+
+        <section class="intro">
+          <h2 class="visually-hidden">Добро пожаловать в Седону.</h2>
+
+          <div class="intro__image-wrapper">
+            <img src="#" width="320" height="158" alt="Каньон Седоны.">
+          </div>
+        </section>
+
+        <section class="photo-catalog">
+          <div class="photo-catalog__title title">
+            <h2 class="title__heading heading heading--big">Фото и видео</h2>
+
+            <p class="title__description description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+          </div>
+
+          <ul class="photo-catalog__list photo-list">
+            <li class="photo-list__item photo photo--top">
+              <a class="photo__link" href="#">
+                <picture>
+                  <img src="#" width="280" height="280" alt="Автодорога на закате.">
+                </picture>
+              </a>
+
+              <h3 class="photo__heading heading">Неродные просторы</h3>
+
+              <p class="photo__author description">Автор фото: Борис</p>
+
+              <p class="photo__likes">1350</p>
+            </li>
+
+            <li class="photo-list__item photo">
+              <a class="photo__link" href="#">
+                <picture>
+                  <img src="#" width="280" height="280" alt="Растения Седоны.">
+                </picture>
+              </a>
+
+              <h3 class="photo__heading heading">Местная растительность</h3>
+
+              <p class="photo__author description">Автор фото: Сергей</p>
+
+              <p class="photo__likes">143</p>
+            </li>
+
+            <li class="photo-list__item photo">
+              <a class="photo__link" href="#">
+                <picture>
+                  <img src="#" width="280" height="280" alt="Горная дорога.">
+                </picture>
+              </a>
+
+              <h3 class="photo__heading heading">Дорога на север</h3>
+
+              <p class="photo__author description">Автор фото: Петр</p>
+
+              <p class="photo__likes">96</p>
+            </li>
+
+            <li class="photo-list__item photo">
+              <a class="photo__link" href="#">
+                <picture>
+                  <img src="#" width="280" height="280" alt="Мост Дьявола.">
+                </picture>
+              </a>
+
+              <h3 class="photo__heading heading">Мост дьявола</h3>
+
+              <p class="photo__author description">Автор фото: Антон</p>
+
+              <p class="photo__likes">254</p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="presentation">
+          <h2 class="presentation__heading heading heading--big">Все еще сомневаетесь?</h2>
+
+          <p class="presentation__description description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+
+          <div class="presentation__video-wrapper">
+            <picture>
+              <img src="#" width="280" height="177" alt="Видео-презентация города Седона.">
+            </picture>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="main-footer">
+        <a class="main-footer__hashtag heading heading--big" href="#">#visitsedona</a>
+
+        <ul class="main-footer__social social-list">
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--vkontakte" href="href=https://vk.com/htmlacademy"><span class="visually-hidden">Группа города ВКонтакте.</span></a>
+          </li>
+
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Группа города в Телеграме.</span></a>
+          </li>
+
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Канал города на ютубе.</span></a>
+          </li>
+        </ul>
+
+        <a class="main-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+      </footer>
+    </div>
+
+    <script src="js/scripts.min.js"></script>
+  </body>
+</html>

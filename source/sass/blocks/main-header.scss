@@ -1,0 +1,22 @@
+.main-header {
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 17px 20px;
+
+  position: relative;
+
+  box-sizing: border-box;
+}
+
+.main-header__logo-link {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 185px;
+  height: 96px;
+
+  transform: translateX(-50%);
+}

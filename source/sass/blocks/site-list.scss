@@ -1,0 +1,45 @@
+@use "../global/variables" as var;
+
+.site-list {
+  display: flex;
+  flex-direction: column;
+
+  list-style-type: none;
+
+  @media (min-width: var.$tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.site-list__item {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 17px 15px 12px 15px;
+
+  box-sizing: border-box;
+
+  min-height: 55px;
+  background-color: var.$basic-blue;
+
+  box-shadow: 0 1px 0 0 rgba(var.$dark-shadow, 0.20), 0 1px 0 0 rgba(var.$white, 0.20) inset;
+
+  &:first-of-type {
+    box-shadow: 0 1px 0 0 rgba(var.$dark-shadow, 0.20);
+  }
+
+  &:last-of-type {
+    box-shadow: 0 1px 0 0 rgba(var.$white, 0.20) inset;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    min-height: unset;
+
+    background-color: transparent;
+
+    box-shadow: unset;
+  }
+}

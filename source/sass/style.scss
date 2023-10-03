@@ -1,1 +1,14 @@
-// Начните писать стили здесь
+// GLOBAL
+
+@use "./global/fonts.scss";
+@use "./global/global.scss";
+
+// PAGE
+
+@use "./blocks/page.scss";
+
+// HEADER
+
+@use "./blocks/main-header.scss";
+@use "./blocks/main-navigation.scss";
+@use "./blocks/site-list.scss";

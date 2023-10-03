@@ -1,0 +1,47 @@
+@use "../global/variables" as var;
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.heading {
+  color: var.$black;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+
+  &--big {
+    font-size: 21px;
+  }
+
+  &--light {
+    color: var.$white;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 21px;
+
+    &--big {
+      font-size: 30px;
+    }
+  }
+}
