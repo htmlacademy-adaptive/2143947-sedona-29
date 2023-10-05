@@ -1,16 +1,13 @@
 @use "../global/variables" as var;
+@import "../global/mixines";
 
 .page {
   height: 100%;
 }
 
 .page__body {
-  color: var.$dark;
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21px;
+  @include font(var.$main-text, 14px, 400, 21px);
+
   text-transform: uppercase;
 
   display: flex;
@@ -20,19 +17,19 @@
 
   margin: 0;
 
-  background-color: var.$light-grey;
+  background-color: var.$secondary-background;
 
   overflow-x: hidden;
 }
 
 .page__wrapper {
-  background-color: var.$white;
+  background-color: var.$main-background;
 
   @media (min-width: var.$desktop-width) {
     margin: 0 auto;
 
     width: 1200px;
 
-    box-shadow: 0 5px 15px 0 rgba(var.$shadow, 0.2);
+    box-shadow: 0 5px 15px 0 rgba(var.$main-shadow, 0.2);
   }
 }

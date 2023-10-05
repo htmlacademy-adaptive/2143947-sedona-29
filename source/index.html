@@ -24,32 +24,45 @@
         </a>
 
         <nav class="main-navigation main-navigation--closed">
-          <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню.</span></button>
+          <button class="main-navigation__toggle" type="button">
+            <span class="visually-hidden">Открыть меню.</span>
+            <span class="main-navigation__toggle-decoration main-navigation__toggle-decoration--top"></span>
+            <span class="main-navigation__toggle-decoration main-navigation__toggle-decoration--middle"></span>
+            <span class="main-navigation__toggle-decoration main-navigation__toggle-decoration--bottom"></span>
+          </button>
 
           <div class="main-navigation__wrapper">
             <ul class="main-navigation__list site-list">
-              <li class="site-list__item site-list__item--current">
-                <a class="site-list__link" href="#">
-                  Главная
-                </a>
+              <li class="site-list__item">
+                <ul class="site-list__inner-list site-list__inner-list--first">
+                  <li class="site-list__inner-item site-list__inner-item--current">
+                    <a class="site-list__link" href="#">
+                      Главная
+                    </a>
+                  </li>
+
+                  <li class="site-list__inner-item">
+                    <a class="site-list__link" href="catalog.html">
+                      Фото и видео
+                    </a>
+                  </li>
+                </ul>
               </li>
 
               <li class="site-list__item">
-                <a class="site-list__link" href="catalog.html">
-                  Фото и видео
-                </a>
-              </li>
+                <ul class="site-list__inner-list site-list__inner-list--second">
+                  <li class="site-list__inner-item">
+                    <a class="site-list__link" href="form.html">
+                      Форма отзыва
+                    </a>
+                  </li>
 
-              <li class="site-list__item">
-                <a class="site-list__link" href="form.html">
-                  Форма отзыва
-                </a>
-              </li>
-
-              <li class="site-list__item">
-                <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">
-                  Html academy
-                </a>
+                  <li class="site-list__inner-item">
+                    <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">
+                      Html academy
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -63,13 +76,17 @@
           <h2 class="visually-hidden">Добро пожаловать в Седону.</h2>
 
           <div class="intro__image-wrapper">
-            <img src="#" width="320" height="389" alt="Каньон Седоны.">
+            <picture>
+              <source type="image/webp" srcset="img/webp/intro-background@1x.webp 1x, img/webp/intro-background@2x.webp 2x">
+
+              <img src="img/jpg/intro-background@1x.jpg" srcset="img/jpg/intro-background@2x 2x" width="320" height="389" alt="Каньон Седоны.">
+            </picture>
           </div>
         </section>
 
         <section class="advantages">
           <div class="advantages__title title">
-            <h2 class="title__heading heading">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+            <h2 class="title__heading heading">Седона — небольшой<br> городок в Аризоне, заслуживающий большего!</h2>
 
             <p class="title__description description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
           </div>

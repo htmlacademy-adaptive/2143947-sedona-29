@@ -6,9 +6,30 @@
 // PAGE
 
 @use "./blocks/page.scss";
+@use "./blocks/heading.scss";
 
 // HEADER
 
 @use "./blocks/main-header.scss";
 @use "./blocks/main-navigation.scss";
 @use "./blocks/site-list.scss";
+
+// INTRO
+
+@use "./blocks/intro.scss";
+
+// TITLE
+
+@use "./blocks/title.scss";
+
+// ADVANTAGES
+
+@use "./blocks/advantages.scss";
+
+// MAP-WIDGET
+
+@use "./blocks/map-widget.scss";
+
+// MAIN-BUTTON
+
+@use "./blocks/main-button.scss";

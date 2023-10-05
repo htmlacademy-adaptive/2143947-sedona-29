@@ -1,6 +1,24 @@
 @use "../global/variables" as var;
+@import "../global/mixines";
 
 .site-list {
+  display: flex;
+  flex-direction: column;
+
+  list-style-type: none;
+
+  @media (min-width: var.$tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+  }
+}
+
+.site-list__inner-list {
+  margin: 0;
+  padding: 0;
+
   display: flex;
   flex-direction: column;
 
@@ -12,7 +30,7 @@
   }
 }
 
-.site-list__item {
+.site-list__inner-item {
   display: flex;
 
   justify-content: center;
@@ -22,24 +40,80 @@
 
   box-sizing: border-box;
 
+  position: relative;
+
   min-height: 55px;
-  background-color: var.$basic-blue;
+  background-color: var.$additional-background;
 
-  box-shadow: 0 1px 0 0 rgba(var.$dark-shadow, 0.20), 0 1px 0 0 rgba(var.$white, 0.20) inset;
-
-  &:first-of-type {
-    box-shadow: 0 1px 0 0 rgba(var.$dark-shadow, 0.20);
-  }
-
-  &:last-of-type {
-    box-shadow: 0 1px 0 0 rgba(var.$white, 0.20) inset;
-  }
+  box-shadow: 0 1px 0 0 rgba(var.$navigation-shadow, 0.2), 0 1px 0 0 rgba(var.$bright-shadow, 0.2) inset;
 
   @media (min-width: var.$tablet-width) {
+    width: 153px;
     min-height: unset;
+
+    padding: 18px 10px 17px 10px;
 
     background-color: transparent;
 
     box-shadow: unset;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    width: 240px;
+  }
+}
+
+.site-list__inner-list--first .site-list__inner-item {
+  &:first-of-type {
+    box-shadow: 0 1px 0 0 rgba(var.$navigation-shadow, 0.2);
+  }
+
+  @media (min-width: var.$tablet-width) {
+    &:first-of-type {
+      box-shadow: unset;
+    }
+  }
+}
+
+.site-list__inner-list--second .site-list__inner-item {
+  &:last-of-type {
+    box-shadow: 0 1px 0 0 rgba(var.$bright-shadow, 0.2) inset;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 7px;
+
+      background: linear-gradient(to bottom, rgba(var.$reverse-background, 0) 0%, rgba(var.$reverse-background, 0.2) 100%);
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    &:last-of-type {
+      box-shadow: unset;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.site-list__link {
+  @include font(var.$bright-text, 18px, 700, 26px);
+
+  @media (min-width: var.$tablet-width) {
+    @include font(var.$heading-text, 14px, 700, 21px);
+  }
+}
+
+.site-list__inner-item--current .site-list__link {
+  @media (min-width: var.$tablet-width) {
+    @include font(var.$current-navigation-link, 14px, 700, 21px);
   }
 }

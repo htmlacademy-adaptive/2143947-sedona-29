@@ -1,0 +1,19 @@
+@use "../global/variables" as var;
+
+.title__heading {
+  margin: 0 0 35px 0;
+
+  text-align: center;
+
+  // @media (min-width: var.$tablet-width) {
+  //   br {
+  //     display: none;
+  //   }
+  // }
+}
+
+.title__description {
+  margin: 0;
+
+  text-align: center;
+}

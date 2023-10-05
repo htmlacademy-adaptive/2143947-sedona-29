@@ -1,12 +1,10 @@
 .main-header {
-  display: flex;
-  justify-content: flex-end;
-
-  padding: 17px 20px;
+  min-height: 56px;
+  width: 100%;
 
   position: relative;
 
-  box-sizing: border-box;
+  z-index: 1;
 }
 
 .main-header__logo-link {

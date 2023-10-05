@@ -15,8 +15,28 @@ $shadow: #000101;
 $dark-shadow: #010101;
 $black: #000000;
 
+// TEXT COLORS
+
+$main-text: $dark;
+$heading-text: $black;
+$bright-text: $white;
+$current-navigation-link: $brown;
+
+// BACKGROUND COLORS
+
+$main-background: $white;
+$secondary-background: $light-grey;
+$additional-background: $basic-blue;
+$reverse-background: $black;
+
+// SHADOWS
+
+$main-shadow: $shadow;
+$navigation-shadow: $dark-shadow;
+$bright-shadow: $white;
+
 // VIEWPORTS
 
 $tablet-width: 768px;
-$desktop-width: 1280px;
+$desktop-width: 1200px;
 $mobile-width-only: 767px;

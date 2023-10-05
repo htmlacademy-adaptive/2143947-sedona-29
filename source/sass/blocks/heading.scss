@@ -1,0 +1,22 @@
+@use "../global/variables" as var;
+@import "../global/mixines";
+
+.heading {
+  @include font(var.$heading-text, 18px, 700, 26px);
+
+  &--big {
+    @include font(var.$heading-text, 21px, 700, 26px);
+  }
+
+  &--light {
+    @include font(var.$bright-text, 18px, 700, 26px);
+  }
+
+  @media (min-width: var.$tablet-width) {
+    @include font(var.$heading-text, 21px, 700, 26px);
+
+    &--big {
+      @include font(var.$heading-text, 30px, 700, 26px);
+    }
+  }
+}

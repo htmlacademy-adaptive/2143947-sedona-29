@@ -1,0 +1,16 @@
+@use "../global/variables" as var;
+@import "../global/mixines";
+
+.main-button {
+  width: 100%;
+  min-height: 58px;
+
+  padding: 10px;
+
+  @include font(var.$bright-text, 21px, 700, 26px);
+
+  text-transform: uppercase;
+
+  background-color: var.$additional-background;
+  border: none;
+}
