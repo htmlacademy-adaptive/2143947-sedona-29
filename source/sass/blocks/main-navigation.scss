@@ -1,4 +1,5 @@
 @use "../global/variables" as var;
+@use "../global/mixins" as mix;
 
 .main-navigation__toggle {
   position: absolute;
@@ -93,9 +94,10 @@
 
 .page__body--no-js .main-navigation__wrapper {
   display: block;
+
+  position: initial;
 }
 
 .main-navigation__list {
-  margin: 0;
-  padding: 0;
+  @include mix.list-reset;
 }

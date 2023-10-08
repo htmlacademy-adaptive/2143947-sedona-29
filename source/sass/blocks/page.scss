@@ -1,12 +1,12 @@
 @use "../global/variables" as var;
-@import "../global/mixines";
+@use "../global/mixins" as mix;
 
 .page {
   height: 100%;
 }
 
 .page__body {
-  @include font(var.$main-text, 14px, 400, 21px);
+  @include mix.font(var.$main-text, 14px, 400, 21px);
 
   text-transform: uppercase;
 

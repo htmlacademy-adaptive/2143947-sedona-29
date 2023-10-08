@@ -1,40 +1,17 @@
 @use "../global/variables" as var;
 
 .intro {
-  margin: 0 0 32px 0;
-}
+  height: 158px;
 
-.intro__image-wrapper {
-  display: flex;
-
-  justify-content: center;
-  align-items: flex-start;
-
-  width: 100%;
-  height: 389px;
-
-  overflow: hidden;
+  background-color: var.$secondary-background;
 
   position: relative;
 
+  overflow: hidden;
+
+  z-index: 0;
+
   &::before {
-    content: "";
-    position: absolute;
-
-    top: 90px;
-    left: 50%;
-
-    width: 282px;
-    height: 214px;
-
-    transform: translateX(-50%);
-
-    background-image: url("../img/svg/intro-text.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  &::after {
     content: "";
     position: absolute;
 
@@ -46,25 +23,99 @@
 
     transform: translateX(-50%);
 
-    background-image: url("../img/svg/intro-triangle.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    mask: url("../img/svg/intro-triangle.svg");
+    mask-repeat: no-repeat;
+
+    background-color: var.$main-background;
+
+    z-index: 1;
   }
 
   @media (min-width: var.$tablet-width) {
-    height: 518px;
+    height: 290px;
+  }
 
-    &::before {
-      top: 77px;
+  &--index {
+    height: 389px;
 
-      width: 461px;
-      height: 350px;
+    @media (min-width: var.$tablet-width) {
+      height: 518px;
     }
   }
 }
 
+.intro__slogan-wrapper {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+}
+
+.intro__slogan-wrapper img {
+  position: absolute;
+
+  top: 52px;
+  left: 50%;
+
+  width: 229px;
+  height: 39px;
+
+  transform: translateX(-50%);
+
+  @media (min-width: var.$tablet-width) {
+    top: 95px;
+
+    width: 457px;
+    height: 78px;
+  }
+}
+
+.intro__slogan-wrapper--index img {
+  top: 90px;
+
+  width: 282px;
+  height: 214px;
+
+  @media (min-width: var.$tablet-width) {
+    top: 77px;
+
+    width: 461px;
+    height: 350px;
+  }
+}
+
+.intro__image-wrapper {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 0;
+}
 
 .intro__image-wrapper img {
+  position: absolute;
+
+  bottom: 0;
+  left: 50%;
+
+  width: auto;
+  height: auto;
+
+  transform: translateX(-50%);
+}
+
+.intro__image-wrapper--index img {
+  top: 0;
+
   width: auto;
   height: 100%;
 }

@@ -1,5 +1,5 @@
 @use "../global/variables" as var;
-@import "../global/mixines";
+@use "../global/mixins" as mix;
 
 .main-button {
   width: 100%;
@@ -7,10 +7,12 @@
 
   padding: 10px;
 
-  @include font(var.$bright-text, 21px, 700, 26px);
+  @include mix.font(var.$bright-text, 21px, 700, 26px);
 
   text-transform: uppercase;
 
   background-color: var.$additional-background;
   border: none;
+
+  box-sizing: border-box;
 }

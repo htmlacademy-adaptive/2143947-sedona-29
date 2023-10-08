@@ -1,28 +1,28 @@
 @use "../global/variables" as var;
-@import "../global/mixines";
+@use "../global/mixins" as mix;
 
 .site-list {
   display: flex;
   flex-direction: column;
-
-  list-style-type: none;
 
   @media (min-width: var.$tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
 
     justify-content: space-between;
+    column-gap: 153px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    column-gap: 240px;
   }
 }
 
 .site-list__inner-list {
-  margin: 0;
-  padding: 0;
+  @include mix.list-reset;
 
   display: flex;
   flex-direction: column;
-
-  list-style-type: none;
 
   @media (min-width: var.$tablet-width) {
     flex-direction: row;
@@ -105,15 +105,15 @@
 }
 
 .site-list__link {
-  @include font(var.$bright-text, 18px, 700, 26px);
+  @include mix.font(var.$bright-text, 18px, 700, 26px);
 
   @media (min-width: var.$tablet-width) {
-    @include font(var.$heading-text, 14px, 700, 21px);
+    @include mix.font(var.$heading-text, 14px, 700, 21px);
   }
 }
 
 .site-list__inner-item--current .site-list__link {
   @media (min-width: var.$tablet-width) {
-    @include font(var.$current-navigation-link, 14px, 700, 21px);
+    @include mix.font(var.$current-navigation-link, 14px, 700, 21px);
   }
 }

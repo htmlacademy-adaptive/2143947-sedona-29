@@ -1,0 +1,46 @@
+@use "../global/variables" as var;
+
+.booking {
+  padding: 38px 18px 49px 18px;
+
+  text-align: center;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 60px 155px 55px 155px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 60px 371px 66px 371px;
+  }
+}
+
+.booking__heading {
+  margin: 0 0 26px 0;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 40px 0;
+  }
+}
+
+.booking__description {
+  margin: 0 0 32px 0;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 44px 0;
+
+    br {
+      display: inline;
+    }
+  }
+}
+
+.booking__link {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}

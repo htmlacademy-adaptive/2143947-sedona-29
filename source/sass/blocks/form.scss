@@ -1,0 +1,94 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.form__fieldset {
+  border: none;
+
+  padding: 24px 0 24px 0;
+  margin: 0;
+}
+
+.form__heading {
+  margin: 0 0 20px 0;
+
+  text-align: center;
+}
+
+.form__input-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 16px;
+}
+
+.form__input-label {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  &--phone,
+  &--email {
+    &::before {
+      content: "";
+      position: absolute;
+
+      bottom: 0;
+      right: 0;
+
+      width: 58px;
+      height: 58px;
+
+      background-color: var.$special-grey;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      bottom: 20px;
+      right: 20px;
+
+      width: 18px;
+      height: 18px;
+
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--phone {
+    &::after {
+      background-image: url("../img/svg/phone.svg");
+    }
+  }
+
+  &--email {
+    &::after {
+      background-image: url("../img/svg/email.svg");
+    }
+  }
+}
+
+.form__input-description {
+  padding: 0 0 0 16px;
+}
+
+.form__input {
+  padding: 16px;
+
+  background-color: var.$secondary-background;
+
+  border: none;
+
+  width: 100%;
+  height: 58px;
+
+  box-sizing: border-box;
+
+  @include mix.font(var.$heading-text, 18px, 700, 26px);
+}
+
+.form__input-label--phone .form__input,
+.form__input-label--email .form__input {
+  width: calc(100% - 58px);
+}

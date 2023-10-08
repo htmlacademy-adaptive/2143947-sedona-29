@@ -7,12 +7,20 @@
 
 @use "./blocks/page.scss";
 @use "./blocks/heading.scss";
+@use "./blocks/main-button.scss";
 
 // HEADER
 
 @use "./blocks/main-header.scss";
 @use "./blocks/main-navigation.scss";
 @use "./blocks/site-list.scss";
+
+// FOOTER
+
+@use "./blocks/main-footer.scss";
+@use "./blocks/social-list.scss";
+
+// INDEX
 
 // INTRO
 
@@ -26,10 +34,18 @@
 
 @use "./blocks/advantages.scss";
 
+// BOOKING
+
+@use "./blocks/booking.scss";
+
 // MAP-WIDGET
 
 @use "./blocks/map-widget.scss";
 
-// MAIN-BUTTON
 
-@use "./blocks/main-button.scss";
+// FORM
+
+// REVIEW
+
+@use "./blocks/review.scss";
+@use "./blocks/form.scss";

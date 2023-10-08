@@ -75,63 +75,73 @@
         <section class="intro">
           <h2 class="visually-hidden">Добро пожаловать в Седону.</h2>
 
+          <div class="intro__slogan-wrapper">
+            <img src="img/svg/intro-text.svg" width="229" height="39" role="img" alt="Слоган Седоны.">
+          </div>
+
           <div class="intro__image-wrapper">
             <picture>
               <source type="image/webp" srcset="img/webp/intro-background@1x.webp 1x, img/webp/intro-background@2x.webp 2x">
 
-              <img src="img/jpg/intro-background@1x.jpg" srcset="img/jpg/intro-background@2x 2x" width="320" height="389" alt="Каньон Седоны.">
+              <img src="img/jpg/intro-background@1x.jpg" srcset="img/jpg/intro-background@2x 2x" width="320" height="158" alt="Каньон Седоны.">
             </picture>
           </div>
         </section>
 
         <section class="review">
           <div class="review__title title">
-            <h2 class="title__heading heading">Оставьте свой отзыв</h2>
+            <h2 class="title__heading title__heading--review">Оставьте свой отзыв</h2>
 
-            <p class="title__description description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+            <p class="title__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
           </div>
 
           <form class="review__form form" action="https://echo.htmlacademy.ru/" method="get">
+            <div class="form__wrapper">
+              <fieldset class="form__fieldset">
+                <h2 class="form__heading heading">Представьтесь:</h2>
+
+                <div class="form__input-wrapper">
+                  <label class="form__input-label">
+                    <span class="form__input-description">Имя*:</span>
+
+                    <input class="form__input" type="text" name="tourist-name" value="Пётр" required>
+                  </label>
+
+                  <label class="form__input-label">
+                    <span class="form__input-description">Фамилия*:</span>
+
+                    <input class="form__input" type="text" name="tourist-surname" value="Пустота" required>
+                  </label>
+
+                  <label class="form__input-label">
+                    <span class="form__input-description">Отчество:</span>
+
+                    <input class="form__input" type="text" name="tourist-patronymic" value="Викторович">
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="form__fieldset">
+                <h2 class="form__heading heading">Контактная информация:</h2>
+
+                <div class="form__input-wrapper">
+                  <label class="form__input-label form__input-label--phone">
+                    <span class="form__input-description">Контактный телефон*:</span>
+
+                    <input class="form__input" type="tel" name="tourist-phone" placeholder="Введите телефон" required>
+                  </label>
+
+                  <label class="form__input-label form__input-label--email">
+                    <span class="form__input-description">Электронная почта*:</span>
+
+                    <input class="form__input" type="email" name="tourist-email" placeholder="Введите e-mail" required>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
             <fieldset class="form__fieldset">
-              <legend class="form__heading heading">Представьтесь:</legend>
-
-              <label class="form__input">
-                <span class="form__input-description">Имя*:</span>
-
-                <input class="form__input-cell" type="text" name="tourist-name" value="Пётр" required>
-              </label>
-
-              <label class="form__input">
-                <span class="form__input-description">Фамилия*:</span>
-
-                <input class="form__input-cell" type="text" name="tourist-surname" value="Пустота" required>
-              </label>
-
-              <label class="form__input">
-                <span class="form__input-description">Отчество:</span>
-
-                <input class="form__input-cell" type="text" name="tourist-patronymic" value="Викторович">
-              </label>
-            </fieldset>
-
-            <fieldset class="form-fieldset">
-              <legend class="form__heading heading">Контактная информация:</legend>
-
-              <label class="form__input">
-                <span class="form__input-description">Контактный телефон*:</span>
-
-                <input class="form__input-cell" type="tel" name="tourist-phone" placeholder="Введите телефон" required>
-              </label>
-
-              <label class="form__input">
-                <span class="form__input-description">Электронная почта*:</span>
-
-                <input class="form__input-cell" type="email" name="tourist-email" placeholder="Введите e-mail" required>
-              </label>
-            </fieldset>
-
-            <fieldset class="form-fieldset">
-              <legend class="form__heading heading">Ваше общее впечатление:</legend>
+              <h2 class="form__heading heading">Ваше общее впечатление:</h2>
 
               <ul class="form__list">
                 <li class="form__item form__item--radio">
@@ -160,8 +170,8 @@
               </ul>
             </fieldset>
 
-            <fieldset class="form-fieldset">
-              <legend class="form__heading heading">Посещенные достопримечательности:</legend>
+            <fieldset class="form__fieldset">
+              <h2 class="form__heading heading">Посещенные достопримечательности:</h2>
 
               <ul class="form__list">
                 <li class="form__item form__item--checkbox">
@@ -198,8 +208,8 @@
               </ul>
             </fieldset>
 
-            <fieldset class="form-fieldset">
-              <legend class="form__heading heading">Опишите свои эмоции:</legend>
+            <fieldset class="form__fieldset">
+              <h2 class="form__heading heading">Опишите свои эмоции:</h2>
 
               <textarea class="form__input form__input--textarea" name="tourist-comment" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
             </fieldset>
@@ -230,7 +240,12 @@
           </li>
         </ul>
 
-        <a class="main-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+        <a class="main-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          Разработано
+          <svg class="main-footer__copyright-logo" width="28" height="35" aria-hidden="true">
+            <use xlink:href="img/svg/sprite.svg#htmlacademy"></use>
+          </svg>
+        </a>
       </footer>
 
       <section class="modal">

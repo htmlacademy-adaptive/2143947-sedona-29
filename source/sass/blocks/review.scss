@@ -1,0 +1,18 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.review__title {
+  padding: 36px 20px 28px 20px;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 64px 166px 108px 166px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 115px 382px 68px 382px;
+  }
+}
+
+.review__form {
+  padding: 0 20px;
+}
