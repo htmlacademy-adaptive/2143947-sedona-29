@@ -49,3 +49,16 @@
 
 @use "./blocks/review.scss";
 @use "./blocks/form.scss";
+
+// MODAL
+
+@use "./blocks/modal.scss";
+@use "./blocks/error-message.scss";
+@use "./blocks/success-message.scss";
+
+
+// CATALOG
+
+// PHOTO-CATALOG
+
+@use "./blocks/photo-catalog.scss";

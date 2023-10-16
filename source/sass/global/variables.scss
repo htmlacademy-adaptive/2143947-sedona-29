@@ -29,16 +29,20 @@ $secondary-background: $light-grey;
 $additional-background: $basic-blue;
 $reverse-background: $black;
 $advantages-background: $basic-grey;
+$input-background: $light-grey;
 
 // SHADOWS
 
 $main-shadow: $shadow;
 $navigation-shadow: $dark-shadow;
 $bright-shadow: $white;
+$modal-shadow: #000101;
 
 // DIVIDER
 
-$divider: #d6d6d6;
+$advantages-divider: #d6d6d6;
+$form-divider: $dark-grey;
+$form-divider-additional: #dbdbdb;
 
 // VIEWPORTS
 

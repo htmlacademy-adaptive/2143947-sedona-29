@@ -1,0 +1,18 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.photo-catalog__title {
+  padding: 37px 20px 25px 20px;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 66px 162px 67px 162px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 100px 377px 65px 377px;
+  }
+}
+
+.photo-catalog__list {
+  @include mix.list-reset;
+}
