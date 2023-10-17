@@ -15,4 +15,10 @@
 
 .photo-catalog__list {
   @include mix.list-reset;
+
+  padding: 0 20px;
+}
+
+.photo-list__item {
+  padding: 24px 0 25px 0;
 }
