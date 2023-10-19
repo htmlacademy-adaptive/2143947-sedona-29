@@ -1,6 +1,24 @@
 @use "../global/variables" as var;
 @use "../global/mixins" as mix;
 
+.photo {
+  @media (min-width: var.$tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    width: calc(100% / 3);
+
+    display: grid;
+  }
+
+  &--top {
+    @media (min-width: var.$tablet-width) {
+      width: 100%;
+    }
+  }
+}
+
 .photo__link {
   display: block;
 
@@ -10,10 +28,27 @@
   margin: 0 0 15px 0;
 
   overflow: hidden;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0;
+
+    height: 267px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+  }
 }
 
 .photo--top .photo__link {
   margin: 0 0 13px 0;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0;
+
+    height: 400px;
+  }
 }
 
 .photo__link img {
@@ -22,10 +57,51 @@
   object-position: center;
 }
 
+.photo__info {
+  width: 100%;
+
+  @media (min-width: var.$tablet-width) {
+    display: flex;
+
+    justify-content: space-between;
+
+    background-color: var.$secondary-background;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+
+    align-self: last baseline;
+
+    background-color: rgba(var.$reverse-background, 0.3);
+  }
+}
+
+.photo:nth-of-type(n + 2):nth-of-type(odd) .photo__info {
+  @media (min-width: var.$tablet-width) {
+    background-color: var.$photo-background;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    background-color: rgba(var.$reverse-background, 0.3);
+  }
+}
+
+.photo__info-wrapper {
+  @media (min-width: var.$tablet-width) {
+    padding: 22px 20px 15px 20px;
+  }
+}
+
 .photo__heading {
   @include mix.font(var.$heading-text, 14px, 700, 21px);
 
-  margin: 0 0 10px 0;
+  margin: 0 0 8px 0;
+
+  @media (min-width: var.$desktop-width) {
+    @include mix.font(var.$bright-text, 14px, 700, 21px);
+  }
 }
 
 .photo__author {
@@ -34,4 +110,58 @@
   text-transform: initial;
 
   margin: 0 0 13px 0;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    @include mix.font(var.$bright-text, 14px, 400, 21px);
+  }
+}
+
+.photo__like-wrapper {
+  display: flex;
+
+  column-gap: 13px;
+
+  justify-content: flex-start;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 32px 20px 27px 20px;
+  }
+}
+
+.photo__like-button {
+  width: 23px;
+  height: 21px;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  background-color: unset;
+  border: none;
+
+  cursor: pointer;
+}
+
+.photo__like-icon {
+  fill: var.$heading-text;
+  opacity: 0.3;
+
+  @media (min-width: var.$desktop-width) {
+    fill: var.$bright-text;
+    opacity: 1;
+  }
+}
+
+.photo__like-counter {
+  @include mix.font(var.$heading-text, 14px, 700, 21px);
+
+  margin: 5px 0 0 0;
+
+  @media (min-width: var.$desktop-width) {
+    @include mix.font(var.$bright-text, 14px, 700, 21px);
+  }
 }

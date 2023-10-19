@@ -25,8 +25,15 @@
 .page__wrapper {
   background-color: var.$main-background;
 
+  display: flex;
+  flex-direction: column;
+
+  flex-grow: 1;
+
+  min-height: 100%;
+
   @media (min-width: var.$desktop-width) {
-    margin: 0 auto;
+    margin: auto;
 
     width: 1200px;
 

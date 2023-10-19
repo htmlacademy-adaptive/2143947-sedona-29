@@ -17,8 +17,23 @@
   @include mix.list-reset;
 
   padding: 0 20px;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0 60px;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 0;
+  }
 }
 
 .photo-list__item {
   padding: 24px 0 25px 0;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0;
+  }
 }

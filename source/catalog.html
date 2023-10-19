@@ -109,17 +109,20 @@
                 </picture>
               </a>
               <div class="photo__info">
-                <h3 class="photo__heading">Неродные просторы</h3>
+                <div class="photo__info-wrapper">
+                  <h3 class="photo__heading">Неродные просторы</h3>
 
-                <p class="photo__author">Автор фото: Борис</p>
+                  <p class="photo__author">Автор фото: Борис</p>
+                </div>
 
                 <div class="photo__like-wrapper">
-                  <button class="photo__like-button">
+                  <button class="photo__like-button" type="button">
+                    <span class="visually-hidden">Кнопка лайк.</span>
                     <svg class="photo__like-icon" width="23" height="21" aria-hidden="true">
                       <use xlink:href="img/svg/sprite.svg#like-icon"></use>
                     </svg>
                   </button>
-                  <p class="photo__likes">1350</p>
+                  <p class="photo__like-counter">1350</p>
                 </div>
               </div>
             </li>
@@ -138,17 +141,20 @@
               </a>
 
               <div class="photo__info">
-                <h3 class="photo__heading">Местная растительность</h3>
+                <div class="photo__info-wrapper">
+                  <h3 class="photo__heading">Местная растительность</h3>
 
-                <p class="photo__author">Автор фото: Сергей</p>
+                  <p class="photo__author">Автор фото: Сергей</p>
+                </div>
 
                 <div class="photo__like-wrapper">
-                  <button class="photo__like-button">
+                  <button class="photo__like-button" type="button">
+                    <span class="visually-hidden">Кнопка лайк.</span>
                     <svg class="photo__like-icon" width="23" height="21" aria-hidden="true">
                       <use xlink:href="img/svg/sprite.svg#like-icon"></use>
                     </svg>
                   </button>
-                  <p class="photo__likes">143</p>
+                  <p class="photo__like-counter">143</p>
                 </div>
               </div>
             </li>
@@ -167,17 +173,20 @@
               </a>
 
               <div class="photo__info">
-                <h3 class="photo__heading">Дорога на север</h3>
+                <div class="photo__info-wrapper">
+                  <h3 class="photo__heading">Дорога на север</h3>
 
-                <p class="photo__author">Автор фото: Петр</p>
+                  <p class="photo__author">Автор фото: Петр</p>
+                </div>
 
                 <div class="photo__like-wrapper">
-                  <button class="photo__like-button">
+                  <button class="photo__like-button" type="button">
+                    <span class="visually-hidden">Кнопка лайк.</span>
                     <svg class="photo__like-icon" width="23" height="21" aria-hidden="true">
                       <use xlink:href="img/svg/sprite.svg#like-icon"></use>
                     </svg>
                   </button>
-                  <p class="photo__likes">96</p>
+                  <p class="photo__like-counter">96</p>
                 </div>
               </div>
             </li>
@@ -196,17 +205,20 @@
               </a>
 
               <div class="photo__info">
-                <h3 class="photo__heading">Мост дьявола</h3>
+                <div class="photo__info-wrapper">
+                  <h3 class="photo__heading">Мост дьявола</h3>
 
-                <p class="photo__author">Автор фото: Антон</p>
+                  <p class="photo__author">Автор фото: Антон</p>
+                </div>
 
                 <div class="photo__like-wrapper">
-                  <button class="photo__like-button">
+                  <button class="photo__like-button" type="button">
+                    <span class="visually-hidden">Кнопка лайк.</span>
                     <svg class="photo__like-icon" width="23" height="21" aria-hidden="true">
                       <use xlink:href="img/svg/sprite.svg#like-icon"></use>
                     </svg>
                   </button>
-                  <p class="photo__likes">254</p>
+                  <p class="photo__like-counter">254</p>
                 </div>
               </div>
             </li>
@@ -214,9 +226,11 @@
         </section>
 
         <section class="presentation">
-          <h2 class="presentation__heading heading heading--big">Все еще сомневаетесь?</h2>
+          <div class="presentation__text-wrapper">
+            <h2 class="presentation__heading">Все еще сомневаетесь?</h2>
 
-          <p class="presentation__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+            <p class="presentation__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          </div>
 
           <div class="presentation__video-wrapper">
             <picture>
@@ -228,6 +242,10 @@
 
               <img src="img/jpg/video-mobile@1x.jpg" srcset="img/jpg/video-mobile@2x.jpg 2x" width="280" height="177" alt="Видео-презентация города Седона.">
             </picture>
+
+            <button class="presentation__video-button" type="button">
+              <span class="visually-hidden">Включить видео.</span>
+            </button>
           </div>
         </section>
 

@@ -8,6 +8,7 @@
 @use "./blocks/page.scss";
 @use "./blocks/heading.scss";
 @use "./blocks/main-button.scss";
+@use "./blocks/main-container.scss";
 
 // HEADER
 
@@ -63,3 +64,7 @@
 
 @use "./blocks/photo-catalog.scss";
 @use "./blocks/photo.scss";
+
+// PRESENTATION
+
+@use "./blocks/presentation.scss";
