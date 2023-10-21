@@ -164,6 +164,8 @@
       height: 58px;
 
       background-color: var.$special-grey;
+
+      cursor: pointer;
     }
 
     &::after {
@@ -177,6 +179,8 @@
       height: 18px;
 
       background-repeat: no-repeat;
+
+      cursor: pointer;
     }
   }
 
@@ -195,14 +199,16 @@
 
 .form__input-description {
   padding: 0 0 0 16px;
+
+  cursor: pointer;
 }
 
 .form__input {
-  padding: 16px;
+  padding: 0 12px;
 
   background-color: var.$input-background;
 
-  border: none;
+  border: 4px solid var.$input-background;
 
   width: 100%;
   height: 58px;
@@ -210,6 +216,22 @@
   box-sizing: border-box;
 
   @include mix.font(var.$heading-text, 18px, 700, 26px);
+
+  transition: background-color 0.3s ease, border 0.3s ease;
+
+  &:hover {
+    background-color: var.$input-hover;
+
+    border: 4px solid var.$input-hover;
+  }
+
+  &:focus-visible {
+    background-color: var.$input-active;
+
+    border: 4px solid var.$input-hover;
+
+    outline: none;
+  }
 }
 
 .form__input-label--phone .form__input,
@@ -313,7 +335,13 @@
 
     background-color: var.$input-background;
 
+    border: 4px solid var.$input-background;
+
     border-radius: 50%;
+
+    box-sizing: border-box;
+
+    transition: background-color 0.3s ease, border 0.3s ease;
   }
 }
 
@@ -331,6 +359,8 @@
     background-color: var.$main-text;
 
     border-radius: 50%;
+
+    transition: opacity 0.3s ease;
   }
 }
 
@@ -353,6 +383,34 @@
     background-color: unset;
 
     border-radius: unset;
+  }
+}
+
+.form__control:hover + .form__description {
+  &::before {
+    background-color: var.$input-hover;
+
+    border: 4px solid var.$input-hover;
+  }
+}
+
+.form__control:focus-visible + .form__description {
+  &::before {
+    background-color: var.$input-active;
+
+    border: 4px solid var.$input-control-active;
+  }
+}
+
+.form__control:active + .form__description {
+  &::before {
+    background-color: var.$input-control-active;
+
+    border: 4px solid var.$input-control-active;
+  }
+
+  &::after {
+    opacity: 0.3;
   }
 }
 

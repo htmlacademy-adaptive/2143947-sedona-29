@@ -20,7 +20,9 @@ $black: #000000;
 $main-text: $dark;
 $heading-text: $black;
 $bright-text: $white;
-$current-navigation-link: $brown;
+$link-text-current: $brown;
+$link-text-hover: $basic-blue;
+$link-text-active: rgba($black, 0.3);
 
 // BACKGROUND COLORS
 
@@ -29,8 +31,8 @@ $secondary-background: $light-grey;
 $additional-background: $basic-blue;
 $reverse-background: $black;
 $advantages-background: $basic-grey;
-$input-background: $light-grey;
 $photo-background: #eaeaea;
+$intro-background: $dark-blue;
 
 // SHADOWS
 
@@ -44,6 +46,21 @@ $modal-shadow: #000101;
 $advantages-divider: #d6d6d6;
 $form-divider: $dark-grey;
 $form-divider-additional: #dbdbdb;
+
+// MAIN-BUTTON
+
+$button-background: $basic-blue;
+$button-hover: $special-blue;
+$button-active: $dark-blue;
+$button-disabled: $dark-grey;
+
+// INPUT
+
+$input-background: $light-grey;
+$input-hover: $dark-grey;
+$input-active: $white;
+$input-control-active: #d5d5d5;
+
 
 // VIEWPORTS
 
