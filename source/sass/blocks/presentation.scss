@@ -6,25 +6,26 @@
 
   @media (min-width: var.$tablet-width) {
     padding: 0 60px;
+    margin: 0 0 45px 0;
   }
 
   @media (min-width: var.$desktop-width) {
     padding: 0 201px 0 199px;
-    margin: 0 0 84px 0;
+    margin: 0 0 89px 0;
   }
 }
 
 .presentation__text-wrapper {
-  padding: 17px 6px 38px 8px;
+  padding: 19px 6px 38px 8px;
 
   text-align: center;
 
   @media (min-width: var.$tablet-width) {
-    padding: 58px 102px 66px 101px;
+    padding: 56px 102px 90px 101px;
   }
 
   @media (min-width: var.$desktop-width) {
-    padding: 62px 177px 64px 178px;
+    padding: 60px 177px 88px 178px;
   }
 }
 
@@ -35,6 +36,8 @@
 
   @media (min-width: var.$tablet-width) {
     @include mix.font(var.$heading-text, 30px, 700, 26px);
+
+    margin: 0 0 31px 0;
   }
 }
 

@@ -9,7 +9,7 @@
   position: relative;
 
   margin: auto;
-  padding: 45px 42px 35px 41px;
+  padding: 46px 42px 36px 41px;
 
   background-color: var.$main-background;
   box-shadow: 0 7px 15px 0 rgba(var.$modal-shadow, 0.15);
@@ -32,7 +32,7 @@
 .error-message__heading {
   @include mix.font(var.$main-text, 18px, 700, 26px);
 
-  margin: 0 0 26px 0;
+  margin: 0 0 25px 0;
 
   br {
     display: none;
@@ -48,7 +48,7 @@
 }
 
 .error-message__description {
-  margin: 0 0 28px 0;
+  margin: 0 0 26px 0;
 
   @media (min-width: var.$tablet-width) {
     margin: 0 0 50px 0;

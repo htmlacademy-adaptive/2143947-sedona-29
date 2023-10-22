@@ -19,7 +19,7 @@
 }
 
 .success-message__text-wrapper {
-  padding: 44px 39px 40px 37px;
+  padding: 44px 39px 46px 37px;
 
   box-sizing: border-box;
 
@@ -46,6 +46,12 @@
 
 .success-message__description {
   margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    br {
+      display: none;
+    }
+  }
 }
 
 .success-message__button-wrapper {

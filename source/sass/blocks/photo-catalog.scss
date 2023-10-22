@@ -2,14 +2,14 @@
 @use "../global/mixins" as mix;
 
 .photo-catalog__title {
-  padding: 37px 20px 25px 20px;
+  padding: 37px 20px 38px 20px;
 
   @media (min-width: var.$tablet-width) {
-    padding: 66px 162px 67px 162px;
+    padding: 66px 162px 83px 162px;
   }
 
   @media (min-width: var.$desktop-width) {
-    padding: 100px 377px 65px 377px;
+    padding: 98px 377px 89px 377px;
   }
 }
 
@@ -26,14 +26,6 @@
   }
 
   @media (min-width: var.$desktop-width) {
-    padding: 0;
-  }
-}
-
-.photo-list__item {
-  padding: 24px 0 25px 0;
-
-  @media (min-width: var.$tablet-width) {
     padding: 0;
   }
 }

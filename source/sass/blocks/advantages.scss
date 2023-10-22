@@ -2,14 +2,14 @@
 @use "../global/mixins" as mix;
 
 .advantages__title {
-  padding: 32px 18px 16px 18px;
+  padding: 33px 18px 16px 18px;
 
   @media (min-width: var.$tablet-width) {
     padding: 47.5px 124px 55.5px 124px;
   }
 
   @media (min-width: var.$desktop-width) {
-    padding: 56px 359px 44px 357px;
+    padding: 60px 359px 44px 357px;
   }
 }
 
@@ -114,7 +114,7 @@
 }
 
 .advantages__item-text {
-  padding: 24px 18px;
+  padding: 24px 18px 25px 18px;
 
   text-align: center;
 
@@ -131,7 +131,7 @@
   padding: 37px 18px;
 
   @media (min-width: var.$tablet-width) {
-    padding: 52px 33px 31px 33px;
+    padding: 52px 33px 30px 33px;
   }
 
   @media (min-width: var.$desktop-width) {
@@ -147,10 +147,10 @@
 }
 
 .advantages__item:first-of-type .advantages__item-text {
-  padding: 54px 18px 40px 18px;
+  padding: 70px 18px 40px 18px;
 
   @media (min-width: var.$tablet-width) {
-    padding: 52px 33px 31px 33px;
+    padding: 52px 33px 30px 33px;
   }
 
   @media (min-width: var.$desktop-width) {
@@ -159,7 +159,7 @@
 }
 
 .advantages__item:last-of-type .advantages__item-text {
-  padding: 24px 18px 40px 28px;
+  padding: 25px 18px 30px 18px;
 
   @media (min-width: var.$tablet-width) {
     padding: 41px 33px;
@@ -195,8 +195,12 @@
   }
 
   @media (min-width: var.$desktop-width) {
-    margin: 0 0 59px 0;
+    margin: 0 0 57px 0;
     padding: 0 75px;
+
+    &::before {
+      bottom: -35px;
+    }
   }
 }
 
@@ -216,10 +220,11 @@
 
 .advantages__item-description {
   margin: 0;
-  padding: 0 8px;
+  padding: 0 13px;
 
   &--light {
     color: var.$bright-text;
+    padding: 0 8px;
   }
 
   br {
@@ -232,6 +237,18 @@
     br {
       display: inline;
     }
+  }
+}
+
+.advantages__item--extencive .advantages__item-description {
+  @media (min-width: var.$desktop-width) {
+    padding: 0 8px;
+  }
+}
+
+.advantages__item--extencive-reverse .advantages__item-description {
+  @media (min-width: var.$desktop-width) {
+    padding: 0 35px;
   }
 }
 
@@ -329,7 +346,7 @@
   }
 
   @media (min-width: var.$tablet-width) {
-    padding: 158px 33px 60px 33px;
+    padding: 155px 33px 60px 33px;
 
     text-align: center;
 
@@ -341,15 +358,16 @@
       transform: translateX(-50%);
     }
 
-    &:first-of-type,
-    &:last-of-type {
+    &:first-of-type {
       padding: 158px 33px 60px 33px;
+
+      &::before {
+        top: 58px;
+      }
     }
 
-    &:first-of-type {
-      &::before {
-        top: 60px;
-      }
+    &:last-of-type {
+      padding: 152px 33px 60px 33px;
     }
 
     &--housing {
@@ -363,7 +381,7 @@
 
     &--food {
       &::before {
-        top: 62px;
+        top: 60px;
 
         width: 80px;
         height: 68px;
@@ -374,7 +392,7 @@
 
     &--souvenirs {
       &::before {
-        top: 64px;
+        top: 61px;
 
         width: 67px;
         height: 75px;
@@ -385,7 +403,7 @@
   }
 
   @media (min-width: var.$desktop-width) {
-    padding: 169px 50px 69px 50px;
+    padding: 166px 50px 69px 50px;
 
     &:first-of-type,
     &:last-of-type {
@@ -416,7 +434,7 @@
   margin: 0 0 16px 0;
 
   @media (min-width: var.$tablet-width) {
-    margin: 0 0 26px 0;
+    margin: 0 0 23px 0;
   }
 }
 

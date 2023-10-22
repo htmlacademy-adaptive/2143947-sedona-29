@@ -35,6 +35,10 @@
     height: 290px;
   }
 
+  @media (min-width: var.$desktop-width) {
+    height: 301px;
+  }
+
   &--index {
     height: 389px;
 
@@ -73,6 +77,10 @@
     width: 457px;
     height: 78px;
   }
+
+  @media (min-width: var.$desktop-width) {
+    top: 102px;
+  }
 }
 
 .intro__slogan-wrapper--index img {
@@ -99,6 +107,8 @@
   height: 100%;
 
   z-index: 0;
+
+  overflow: hidden;
 }
 
 .intro__image-wrapper img {
@@ -107,10 +117,18 @@
   bottom: 0;
   left: 50%;
 
-  width: auto;
+  width: 280%;
   height: auto;
 
   transform: translateX(-50%);
+
+  @media (min-width: var.$tablet-width) {
+    width: 155%;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    width: 100%;
+  }
 }
 
 .intro__image-wrapper--index img {
