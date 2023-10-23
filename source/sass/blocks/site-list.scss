@@ -18,6 +18,16 @@
   }
 }
 
+.site-list__item {
+  @media (min-width: var.$tablet-width) {
+    width: 306px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    width: 480px;
+  }
+}
+
 .site-list__inner-list {
   @include mix.list-reset;
 

@@ -26,11 +26,11 @@
   text-align: center;
 
   @media (min-width: var.$tablet-width) {
-    padding: 53px 110px 50px 110px;
+    padding: 44px 110px 53px 110px;
   }
 
   @media (min-width: var.$desktop-width) {
-    padding: 48px 47px 49px 46px;
+    padding: 43px 47px 54px 46px;
   }
 }
 
@@ -41,17 +41,13 @@
 
   @media (min-width: var.$tablet-width) {
     @include mix.font(var.$main-text, 30px, 700, 40px);
+
+    margin: 0 0 23px 0;
   }
 }
 
 .success-message__description {
   margin: 0;
-
-  @media (min-width: var.$tablet-width) {
-    br {
-      display: none;
-    }
-  }
 }
 
 .success-message__button-wrapper {

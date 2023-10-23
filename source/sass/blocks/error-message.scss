@@ -41,6 +41,8 @@
   @media (min-width: var.$tablet-width) {
     @include mix.font(var.$main-text, 30px, 700, 40px);
 
+    margin: 0 0 23px 0;
+
     br {
       display: inline;
     }
@@ -51,7 +53,7 @@
   margin: 0 0 26px 0;
 
   @media (min-width: var.$tablet-width) {
-    margin: 0 0 50px 0;
+    margin: 0 0 46px 0;
   }
 }
 
