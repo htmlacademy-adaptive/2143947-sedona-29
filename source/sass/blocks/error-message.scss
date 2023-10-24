@@ -30,7 +30,7 @@
 }
 
 .error-message__heading {
-  @include mix.font(var.$main-text, 18px, 700, 26px);
+  @include mix.font(var.$heading-text, 18px, 700, 26px);
 
   margin: 0 0 25px 0;
 

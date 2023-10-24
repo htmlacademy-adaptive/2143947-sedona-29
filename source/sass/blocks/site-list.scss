@@ -41,6 +41,8 @@
 }
 
 .site-list__inner-item {
+  padding: 0 0 1px 0;
+
   display: flex;
 
   justify-content: center;
@@ -50,7 +52,13 @@
 
   min-height: 55px;
 
+  background-color: var.$additional-background;
+
   @media (min-width: var.$tablet-width) {
+    padding: 0;
+
+    background-color: unset;
+
     width: 153px;
     min-height: unset;
   }
@@ -65,7 +73,7 @@
 
   text-align: center;
 
-  padding: 17px 15px 13px 15px;
+  padding: 17px 15px 12px 15px;
 
   width: 100%;
 
