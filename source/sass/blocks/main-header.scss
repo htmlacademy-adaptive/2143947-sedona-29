@@ -1,12 +1,10 @@
 .main-header {
-  display: flex;
-  justify-content: flex-end;
-
-  padding: 17px 20px;
+  min-height: 56px;
+  width: 100%;
 
   position: relative;
 
-  box-sizing: border-box;
+  z-index: 1;
 }
 
 .main-header__logo-link {
@@ -18,5 +16,18 @@
   width: 185px;
   height: 96px;
 
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(1);
+  transform-origin: top;
+
+  transition: transform 0.5s ease, opacity 0.3s ease;
+
+  overflow: hidden;
+
+  &:hover {
+    transform: translateX(-50%) scale(1.1);
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 }

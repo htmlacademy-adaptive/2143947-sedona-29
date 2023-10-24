@@ -1,0 +1,16 @@
+@mixin font($color, $size, $weight, $height) {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+
+
+@mixin list-reset {
+  padding: 0;
+  margin: 0;
+
+  list-style-type: none;
+}

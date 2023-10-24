@@ -1,0 +1,26 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.heading {
+  @include mix.font(var.$heading-text, 18px, 700, 26px);
+
+  &--big {
+    @include mix.font(var.$heading-text, 21px, 700, 26px);
+  }
+
+  &--light {
+    @include mix.font(var.$bright-text, 18px, 700, 26px);
+  }
+
+  @media (min-width: var.$tablet-width) {
+    @include mix.font(var.$heading-text, 21px, 700, 26px);
+
+    &--big {
+      @include mix.font(var.$heading-text, 30px, 700, 26px);
+    }
+
+    &--light {
+      @include mix.font(var.$bright-text, 21px, 700, 26px);
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.error-message {
+  background-color: rgba(var.$reverse-background, 0.3);
+}
+
+.error-message__wrapper {
+  position: relative;
+
+  margin: auto;
+  padding: 46px 42px 36px 41px;
+
+  background-color: var.$main-background;
+  box-shadow: 0 7px 15px 0 rgba(var.$modal-shadow, 0.15);
+
+  text-align: center;
+
+  box-sizing: border-box;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 50px 47px 49px 46px;
+
+    width: 400px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 48px 47px 49px 46px;
+  }
+}
+
+.error-message__heading {
+  @include mix.font(var.$heading-text, 18px, 700, 26px);
+
+  margin: 0 0 25px 0;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    @include mix.font(var.$main-text, 30px, 700, 40px);
+
+    margin: 0 0 23px 0;
+
+    br {
+      display: inline;
+    }
+  }
+}
+
+.error-message__description {
+  margin: 0 0 26px 0;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 46px 0;
+  }
+}
+
+.error-message__button {
+  @include mix.font(var.$bright-text, 18px, 700, 26px);
+
+  width: calc(100% - 57px);
+
+  @media (min-width: var.$tablet-width) {
+    width: calc(100% - 35px);
+  }
+}

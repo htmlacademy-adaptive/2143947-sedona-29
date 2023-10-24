@@ -1,0 +1,9 @@
+@use "../global/variables" as var;
+
+.photo-list__item {
+  padding: 24px 0;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0;
+  }
+}

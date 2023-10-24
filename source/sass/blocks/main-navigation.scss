@@ -1,11 +1,100 @@
 @use "../global/variables" as var;
+@use "../global/mixins" as mix;
 
 .main-navigation__toggle {
+  position: absolute;
+
+  top: 17px;
+  right: 20px;
+
+  width: 23px;
+  height: 22px;
+
+  background-color: unset;
+  border: none;
+
   z-index: 10;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+
+    pointer-events: none;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    display: none;
+  }
+}
+
+.main-navigation__toggle-decoration {
+  position: absolute;
+
+  width: 100%;
+  height: 4px;
+
+  background-color: var.$main-background;
+
+  &--top {
+    top: 0;
+    left: 0;
+
+    transform: translateY(9px) rotate(45deg);
+
+    transition: transform 0.3s ease;
+  }
+
+  &--middle {
+    opacity: 0;
+
+    top: 50%;
+    left: 0;
+
+    transform: translateY(-50%) scaleX(0);
+
+    transition: transform 0.6s ease, opacity 0.3s ease;
+  }
+
+  &--bottom {
+    bottom: 0;
+    left: 0;
+
+    transform: translateY(-9px) rotate(-45deg);
+
+    transition: transform 0.3s ease;
+  }
+}
+
+.main-navigation--closed .main-navigation__toggle-decoration {
+  background-color: var.$additional-background;
+
+  &--top {
+    transform: translateY(0) rotate(0);
+  }
+
+  &--middle {
+    opacity: 1;
+
+    transform: translateY(-50%) scaleX(1);
+  }
+
+  &--bottom {
+    transform: translateY(0) rotate(0);
+  }
 }
 
 .main-navigation__wrapper {
   position: absolute;
+
   top: 0;
   left: 0;
 
@@ -29,9 +118,10 @@
 
 .page__body--no-js .main-navigation__wrapper {
   display: block;
+
+  position: initial;
 }
 
 .main-navigation__list {
-  margin: 0;
-  padding: 0;
+  @include mix.list-reset;
 }

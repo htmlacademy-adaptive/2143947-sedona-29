@@ -1,0 +1,246 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.photo {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    bottom: 0;
+    left: -20px;
+
+    width: calc(100% + 40px);
+    height: 1px;
+
+    background-color: var.$form-divider;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    width: 50%;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    width: calc(100% / 3);
+
+    display: grid;
+  }
+
+  &--top {
+    &::before {
+      content: "";
+      position: absolute;
+
+      top: 0;
+      left: -20px;
+
+      width: calc(100% + 40px);
+      height: 1px;
+
+      background-color: var.$form-divider;
+    }
+
+    @media (min-width: var.$tablet-width) {
+      width: 100%;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.photo__link {
+  display: block;
+
+  width: 100%;
+  height: 280px;
+
+  margin: 0 0 15px 0;
+
+  overflow: hidden;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0;
+
+    height: 267px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+  }
+}
+
+.photo--top .photo__link {
+  margin: 0 0 13px 0;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0;
+
+    height: 400px;
+  }
+}
+
+.photo__link img {
+  height: 100%;
+
+  object-position: center;
+
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.photo__link:hover img {
+  transform: scale(1.2);
+}
+
+.photo__link:active img {
+  opacity: 0.8;
+}
+
+.photo__info {
+  width: 100%;
+
+  @media (min-width: var.$tablet-width) {
+    display: flex;
+
+    justify-content: space-between;
+
+    background-color: var.$secondary-background;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+
+    align-self: last baseline;
+
+    background-color: rgba(var.$reverse-background, 0.3);
+
+    z-index: 5;
+  }
+}
+
+.photo:nth-of-type(n + 2):nth-of-type(odd) .photo__info {
+  @media (min-width: var.$tablet-width) {
+    background-color: var.$photo-background;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    background-color: rgba(var.$reverse-background, 0.3);
+  }
+}
+
+.photo__info-wrapper {
+  @media (min-width: var.$tablet-width) {
+    padding: 21px 20px 15px 20px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 19px 26px 18px 26px;
+  }
+}
+
+.photo--top .photo__info-wrapper {
+  @media (min-width: var.$desktop-width) {
+    padding: 21px 20px 15px 20px;
+  }
+}
+
+.photo__heading {
+  @include mix.font(var.$heading-text, 14px, 700, 21px);
+
+  margin: 0 0 2px 0;
+
+  @media (min-width: var.$desktop-width) {
+    @include mix.font(var.$bright-text, 14px, 700, 21px);
+  }
+}
+
+.photo__author {
+  @include mix.font(var.$main-text, 14px, 400, 21px);
+
+  text-transform: initial;
+
+  margin: 0 0 12px 0;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    @include mix.font(var.$bright-text, 14px, 400, 21px);
+  }
+}
+
+.photo__like-wrapper {
+  display: flex;
+
+  column-gap: 13px;
+
+  justify-content: flex-start;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 27px 20px;
+
+    column-gap: 8px;
+  }
+}
+
+.photo__like-button {
+  width: 23px;
+  height: 21px;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  background-color: unset;
+  border: none;
+
+  cursor: pointer;
+}
+
+.photo__like-icon {
+  fill: var.$heading-text;
+  opacity: 0.3;
+
+  transition: fill 0.3s ease, opacity 0.3s ease;
+
+  @media (min-width: var.$desktop-width) {
+    fill: var.$bright-text;
+    opacity: 1;
+  }
+}
+
+.photo__like-button:hover .photo__like-icon {
+  fill: var.$link-text-hover;
+  opacity: 1;
+}
+
+.photo__like-button:active .photo__like-icon {
+  fill: var.$link-text-hover;
+  opacity: 0.3;
+}
+
+.photo__like-button:disabled .photo__like-icon {
+  fill: var.$main-text;
+  opacity: 0.1;
+
+  pointer-events: none;
+}
+
+.photo__like-counter {
+  @include mix.font(var.$heading-text, 14px, 700, 21px);
+
+  margin: 5px 0 0 0;
+
+  @media (min-width: var.$desktop-width) {
+    @include mix.font(var.$bright-text, 14px, 700, 21px);
+  }
+}

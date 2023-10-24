@@ -1,0 +1,73 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  column-gap: 6px;
+  row-gap: 8px;
+}
+
+.social-list__link {
+  display: block;
+
+  width: 48px;
+  height: 48px;
+
+  background-color: var.$button-background;
+
+  position: relative;
+
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var.$button-hover;
+  }
+
+  &:active {
+    background-color: var.$button-active;
+
+    &::before {
+      background-color: rgba(var.$bright-text, 0.3);
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 24px;
+    height: 24px;
+
+    mask-repeat: no-repeat;
+    background-color: var.$bright-text;
+
+    transition: background-color 0.3s ease;
+  }
+
+  &--vkontakte {
+    &::before {
+      mask: url("../img/svg/vk.svg");
+    }
+  }
+
+  &--telegram {
+    &::before {
+      mask: url("../img/svg/telegram.svg");
+    }
+  }
+
+  &--youtube {
+    &::before {
+      mask: url("../img/svg/youtube.svg");
+    }
+  }
+}

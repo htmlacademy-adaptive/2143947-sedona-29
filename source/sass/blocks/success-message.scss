@@ -1,0 +1,71 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.success-message {
+  background-color: rgba(var.$reverse-background, 0.3);
+}
+
+.success-message__wrapper {
+  position: relative;
+
+  margin: auto;
+
+  background-color: var.$main-background;
+  box-shadow: 0 7px 15px 0 rgba(var.$modal-shadow, 0.15);
+
+  @media (min-width: var.$tablet-width) {
+    width: 640px;
+  }
+}
+
+.success-message__text-wrapper {
+  padding: 44px 39px 46px 37px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 44px 110px 53px 110px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 43px 47px 54px 46px;
+  }
+}
+
+.success-message__heading {
+  @include mix.font(var.$heading-text, 18px, 700, 26px);
+
+  margin: 0 0 26px 0;
+
+  @media (min-width: var.$tablet-width) {
+    @include mix.font(var.$main-text, 30px, 700, 40px);
+
+    margin: 0 0 23px 0;
+  }
+}
+
+.success-message__description {
+  margin: 0;
+}
+
+.success-message__button-wrapper {
+  padding: 20px;
+
+  background-color: var.$secondary-background;
+
+  box-sizing: border-box;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 44px 91px;
+  }
+}
+
+.success-message__button {
+  @include mix.font(var.$bright-text, 18px, 700, 26px);
+
+  @media (min-width: var.$tablet-width) {
+    @include mix.font(var.$bright-text, 21px, 700, 26px);
+  }
+}

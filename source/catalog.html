@@ -19,37 +19,50 @@
   <body class="page__body page__body--no-js">
     <div class="page__wrapper">
       <header class="main-header">
-        <a class="main-header__logo-link" href="#">
+        <a class="main-header__logo-link" href="index.html">
           <img src="img/svg/main-logo.svg" width="185" height="96" alt="Логотип города Седона.">
         </a>
 
         <nav class="main-navigation main-navigation--closed">
-          <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню.</span></button>
+          <button class="main-navigation__toggle" type="button">
+            <span class="visually-hidden">Открыть меню.</span>
+            <span class="main-navigation__toggle-decoration main-navigation__toggle-decoration--top"></span>
+            <span class="main-navigation__toggle-decoration main-navigation__toggle-decoration--middle"></span>
+            <span class="main-navigation__toggle-decoration main-navigation__toggle-decoration--bottom"></span>
+          </button>
 
           <div class="main-navigation__wrapper">
             <ul class="main-navigation__list site-list">
               <li class="site-list__item">
-                <a class="site-list__link" href="index.html">
-                  Главная
-                </a>
-              </li>
+                <ul class="site-list__inner-list site-list__inner-list--first">
+                  <li class="site-list__inner-item">
+                    <a class="site-list__link site-list__link--first" href="index.html">
+                      Главная
+                    </a>
+                  </li>
 
-              <li class="site-list__item site-list__item--current">
-                <a class="site-list__link" href="#">
-                  Фото и видео
-                </a>
+                  <li class="site-list__inner-item site-list__inner-item--current">
+                    <a class="site-list__link" href="#">
+                      Фото и видео
+                    </a>
+                  </li>
+                </ul>
               </li>
 
               <li class="site-list__item">
-                <a class="site-list__link" href="form.html">
-                  Форма отзыва
-                </a>
-              </li>
+                <ul class="site-list__inner-list site-list__inner-list--second">
+                  <li class="site-list__inner-item">
+                    <a class="site-list__link" href="form.html">
+                      Форма отзыва
+                    </a>
+                  </li>
 
-              <li class="site-list__item">
-                <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">
-                  Html academy
-                </a>
+                  <li class="site-list__inner-item">
+                    <a class="site-list__link site-list__link--last" href="https://htmlacademy.ru/intensive/adaptive">
+                      Html academy
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -62,86 +75,177 @@
         <section class="intro">
           <h2 class="visually-hidden">Добро пожаловать в Седону.</h2>
 
+          <div class="intro__slogan-wrapper">
+            <img src="img/svg/intro-text.svg" width="229" height="39" alt="Слоган Седоны.">
+          </div>
+
           <div class="intro__image-wrapper">
-            <img src="#" width="320" height="158" alt="Каньон Седоны.">
+            <picture>
+              <source type="image/webp" srcset="img/webp/intro-background@1x.webp 1x, img/webp/intro-background@2x.webp 2x">
+
+              <img src="img/jpg/intro-background@1x.jpg" srcset="img/jpg/intro-background@2x 2x" width="320" height="158" alt="Каньон Седоны.">
+            </picture>
           </div>
         </section>
 
         <section class="photo-catalog">
           <div class="photo-catalog__title title">
-            <h2 class="title__heading heading heading--big">Фото и видео</h2>
+            <h2 class="title__heading title__heading--photo-catalog">Фото и видео</h2>
 
-            <p class="title__description description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+            <p class="title__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
           </div>
 
           <ul class="photo-catalog__list photo-list">
             <li class="photo-list__item photo photo--top">
-              <a class="photo__link" href="#">
+              <a class="photo__link" href="img/jpg/photo-1-desktop@2x.jpg" target="_blank">
                 <picture>
-                  <img src="#" width="280" height="280" alt="Автодорога на закате.">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/photo-1-desktop@1x.webp 1x, img/webp/photo-1-desktop@2x.webp 2x">
+
+                  <source type="image/webp" srcset="img/webp/photo-1-mobile@1x.webp 1x, img/webp/photo-1-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 768px)" srcset="img/jpg/photo-1-desktop@1x.jpg 1x, img/jpg/photo-1-desktop@2x.jpg 2x">
+
+                  <img src="img/jpg/photo-1-mobile@1x.jpg" srcset="img/jpg/photo-1-mobile@2x.jpg 2x" width="280" height="280" alt="Автодорога на закате.">
                 </picture>
               </a>
+              <div class="photo__info">
+                <div class="photo__info-wrapper">
+                  <h3 class="photo__heading">Неродные просторы</h3>
 
-              <h3 class="photo__heading heading">Неродные просторы</h3>
+                  <p class="photo__author">Автор фото: Борис</p>
+                </div>
 
-              <p class="photo__author description">Автор фото: Борис</p>
-
-              <p class="photo__likes">1350</p>
+                <div class="photo__like-wrapper">
+                  <button class="photo__like-button" type="button">
+                    <span class="visually-hidden">Кнопка лайк.</span>
+                    <svg class="photo__like-icon" width="23" height="21" aria-hidden="true">
+                      <use xlink:href="img/svg/sprite.svg#like-icon"></use>
+                    </svg>
+                  </button>
+                  <p class="photo__like-counter">1350</p>
+                </div>
+              </div>
             </li>
 
             <li class="photo-list__item photo">
-              <a class="photo__link" href="#">
+              <a class="photo__link" href="img/jpg/photo-2-desktop@2x.jpg" target="_blank">
                 <picture>
-                  <img src="#" width="280" height="280" alt="Растения Седоны.">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/photo-2-desktop@1x.webp 1x, img/webp/photo-2-desktop@2x.webp 2x">
+
+                  <source type="image/webp" srcset="img/webp/photo-2-mobile@1x.webp 1x, img/webp/photo-2-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 768px)" srcset="img/jpg/photo-2-desktop@1x.jpg 1x, img/jpg/photo-2-desktop@2x.jpg 2x">
+
+                  <img src="img/jpg/photo-2-mobile@1x.jpg" srcset="img/jpg/photo-2-mobile@2x.jpg 2x" width="280" height="280" alt="Растения Седоны.">
                 </picture>
               </a>
 
-              <h3 class="photo__heading heading">Местная растительность</h3>
+              <div class="photo__info">
+                <div class="photo__info-wrapper">
+                  <h3 class="photo__heading">Местная растительность</h3>
 
-              <p class="photo__author description">Автор фото: Сергей</p>
+                  <p class="photo__author">Автор фото: Сергей</p>
+                </div>
 
-              <p class="photo__likes">143</p>
+                <div class="photo__like-wrapper">
+                  <button class="photo__like-button" type="button">
+                    <span class="visually-hidden">Кнопка лайк.</span>
+                    <svg class="photo__like-icon" width="23" height="21" aria-hidden="true">
+                      <use xlink:href="img/svg/sprite.svg#like-icon"></use>
+                    </svg>
+                  </button>
+                  <p class="photo__like-counter">143</p>
+                </div>
+              </div>
             </li>
 
             <li class="photo-list__item photo">
-              <a class="photo__link" href="#">
+              <a class="photo__link" href="img/jpg/photo-3-desktop@2x.jpg" target="_blank">
                 <picture>
-                  <img src="#" width="280" height="280" alt="Горная дорога.">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/photo-3-desktop@1x.webp 1x, img/webp/photo-3-desktop@2x.webp 2x">
+
+                  <source type="image/webp" srcset="img/webp/photo-3-mobile@1x.webp 1x, img/webp/photo-3-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 768px)" srcset="img/jpg/photo-3-desktop@1x.jpg 1x, img/jpg/photo-3-desktop@2x.jpg 2x">
+
+                  <img src="img/jpg/photo-3-mobile@1x.jpg" srcset="img/jpg/photo-3-mobile@2x.jpg 2x" width="280" height="280" alt="Горная дорога.">
                 </picture>
               </a>
 
-              <h3 class="photo__heading heading">Дорога на север</h3>
+              <div class="photo__info">
+                <div class="photo__info-wrapper">
+                  <h3 class="photo__heading">Дорога на север</h3>
 
-              <p class="photo__author description">Автор фото: Петр</p>
+                  <p class="photo__author">Автор фото: Петр</p>
+                </div>
 
-              <p class="photo__likes">96</p>
+                <div class="photo__like-wrapper">
+                  <button class="photo__like-button" type="button">
+                    <span class="visually-hidden">Кнопка лайк.</span>
+                    <svg class="photo__like-icon" width="23" height="21" aria-hidden="true">
+                      <use xlink:href="img/svg/sprite.svg#like-icon"></use>
+                    </svg>
+                  </button>
+                  <p class="photo__like-counter">96</p>
+                </div>
+              </div>
             </li>
 
             <li class="photo-list__item photo">
-              <a class="photo__link" href="#">
+              <a class="photo__link" href="#" target="_blank">
                 <picture>
-                  <img src="#" width="280" height="280" alt="Мост Дьявола.">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/photo-4-desktop@1x.webp 1x, img/webp/photo-4-desktop@2x.webp 2x">
+
+                  <source type="image/webp" srcset="img/webp/photo-4-mobile@1x.webp 1x, img/webp/photo-4-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 768px)" srcset="img/jpg/photo-4-desktop@1x.jpg 1x, img/jpg/photo-4-desktop@2x.jpg 2x">
+
+                  <img src="img/jpg/photo-4-mobile@1x.jpg" srcset="img/jpg/photo-4-mobile@2x.jpg 2x" width="280" height="280" alt="Мост Дьявола.">
                 </picture>
               </a>
 
-              <h3 class="photo__heading heading">Мост дьявола</h3>
+              <div class="photo__info">
+                <div class="photo__info-wrapper">
+                  <h3 class="photo__heading">Мост дьявола</h3>
 
-              <p class="photo__author description">Автор фото: Антон</p>
+                  <p class="photo__author">Автор фото: Антон</p>
+                </div>
 
-              <p class="photo__likes">254</p>
+                <div class="photo__like-wrapper">
+                  <button class="photo__like-button" type="button">
+                    <span class="visually-hidden">Кнопка лайк.</span>
+                    <svg class="photo__like-icon" width="23" height="21" aria-hidden="true">
+                      <use xlink:href="img/svg/sprite.svg#like-icon"></use>
+                    </svg>
+                  </button>
+                  <p class="photo__like-counter">254</p>
+                </div>
+              </div>
             </li>
           </ul>
         </section>
 
         <section class="presentation">
-          <h2 class="presentation__heading heading heading--big">Все еще сомневаетесь?</h2>
+          <div class="presentation__text-wrapper">
+            <h2 class="presentation__heading">Все еще сомневаетесь?</h2>
 
-          <p class="presentation__description description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+            <p class="presentation__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          </div>
 
           <div class="presentation__video-wrapper">
             <picture>
-              <img src="#" width="280" height="177" alt="Видео-презентация города Седона.">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/video-desktop@1x.webp 1x, img/webp/video-desktop@2x.webp 2x">
+
+              <source type="image/webp" srcset="img/webp/video-mobile@1x.webp 1x, img/webp/video-mobile@2x.webp 2x">
+
+              <source media="(min-width: 768px)" srcset="img/jpg/video-desktop@1x.jpg 1x, img/jpg/video-desktop@2x.jpg 2x">
+
+              <img src="img/jpg/video-mobile@1x.jpg" srcset="img/jpg/video-mobile@2x.jpg 2x" width="280" height="177" alt="Видео-презентация города Седона.">
             </picture>
+
+            <button class="presentation__video-button" type="button">
+              <span class="visually-hidden">Включить видео.</span>
+            </button>
           </div>
         </section>
 
@@ -152,19 +256,24 @@
 
         <ul class="main-footer__social social-list">
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--vkontakte" href="href=https://vk.com/htmlacademy"><span class="visually-hidden">Группа города ВКонтакте.</span></a>
+            <a class="social-list__link social-list__link--vkontakte" href="href=https://vk.com/htmlacademy" target="_blank"><span class="visually-hidden">Группа города ВКонтакте.</span></a>
           </li>
 
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Группа города в Телеграме.</span></a>
+            <a class="social-list__link social-list__link--telegram" href="https://t.me/htmlacademy" target="_blank"><span class="visually-hidden">Группа города в Телеграме.</span></a>
           </li>
 
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Канал города на ютубе.</span></a>
+            <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank"><span class="visually-hidden">Канал города на ютубе.</span></a>
           </li>
         </ul>
 
-        <a class="main-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+        <a class="main-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          Разработано
+          <svg class="main-footer__copyright-logo" width="28" height="35" aria-hidden="true">
+            <use xlink:href="img/svg/sprite.svg#htmlacademy"></use>
+          </svg>
+        </a>
       </footer>
     </div>
 

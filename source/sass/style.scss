@@ -6,9 +6,66 @@
 // PAGE
 
 @use "./blocks/page.scss";
+@use "./blocks/heading.scss";
+@use "./blocks/main-button.scss";
+@use "./blocks/main-container.scss";
 
 // HEADER
 
 @use "./blocks/main-header.scss";
 @use "./blocks/main-navigation.scss";
 @use "./blocks/site-list.scss";
+
+// FOOTER
+
+@use "./blocks/main-footer.scss";
+@use "./blocks/social-list.scss";
+
+// INDEX
+
+// INTRO
+
+@use "./blocks/intro.scss";
+
+// TITLE
+
+@use "./blocks/title.scss";
+
+// ADVANTAGES
+
+@use "./blocks/advantages.scss";
+
+// BOOKING
+
+@use "./blocks/booking.scss";
+
+// MAP-WIDGET
+
+@use "./blocks/map-widget.scss";
+
+
+// FORM
+
+// REVIEW
+
+@use "./blocks/review.scss";
+@use "./blocks/form.scss";
+
+// MODAL
+
+@use "./blocks/modal.scss";
+@use "./blocks/error-message.scss";
+@use "./blocks/success-message.scss";
+
+
+// CATALOG
+
+// PHOTO-CATALOG
+
+@use "./blocks/photo-catalog.scss";
+@use "./blocks/photo-list.scss";
+@use "./blocks/photo.scss";
+
+// PRESENTATION
+
+@use "./blocks/presentation.scss";
